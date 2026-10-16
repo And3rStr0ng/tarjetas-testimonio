@@ -1,0 +1,201 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #f4f5f7;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- Tarjeta 1: Estilo Burbuja Oscura --- */
+        .card-speech .bubble {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 24px;
+            border-radius: 16px;
+            position: relative;
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        /* --- Tarjeta 2: Estilo Tarjeta Bordeada Clara --- */
+        .card-border-light {
+            background-color: #ffffff;
+            border: 1.5px solid #1a1a1a;
+            border-radius: 16px;
+            padding: 24px;
+            justify-content: space-between;
+        }
+
+        .card-border-light p {
+            color: #222;
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 24px;
+        }
+
+        /* --- Tarjeta 3: Imagen Grande a la Izquierda --- */
+        .card-image-left {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            aspect-ratio: 1 / 1;
+        }
+
+        .card-image-left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- Tarjeta 4: Estrellas y Fondo Oscuro --- */
+        .card-rating {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .stars {
+            color: #ffc107;
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .card-rating h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .card-rating span.role {
+            color: #888;
+            font-size: 13px;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .card-rating p {
+            color: #ddd;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* --- Estilos Comunes para Perfiles (Autor) --- */
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .user-info img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .user-details h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .user-details span {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Variante de texto blanco para perfiles en fondo oscuro */
+        .card-speech .user-details h4 {
+            color: #1a1a1a; /* En la imagen original el texto de abajo está fuera de la burbuja sobre fondo claro */
+        }
+
+        .card-carousel-fixed {
+            grid-column: 1 / -1; /* Ocupa todo el ancho de la cuadrícula */
+            background-color: #ffffff;
+            border: 1.5px solid #1a1a1a;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .carousel-text {
+            max-width: 650px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #222;
+            margin-bottom: 40px;
+        }
+
+        .carousel-nav-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 12px;
+        }
+
+        .carousel-btn {
+            background: none;
+            border: none;
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a1a1a;
+            cursor: pointer;
+        }
+
+        .carousel-avatars {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .carousel-avatars img {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+            opacity: 0.5; /* Atenuadas las de los lados */
+            transition: opacity 0.2s;
+        }
+
+        .carousel-avatars img.active {
+            width: 52px;
+            height: 52px;
+            opacity: 1; /* Activa/central más grande y nítida */
+            border: 2px solid #1a1a1a;
+        }
+
+        .carousel-author {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
